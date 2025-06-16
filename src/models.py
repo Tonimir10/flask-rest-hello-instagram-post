@@ -13,8 +13,8 @@ db = SQLAlchemy()
 followers = Table(
     'followers',
     db.metadata,
-    db.Column('follower_id', db.Integer, db.ForeignKey('user.id')),
-    db.Column('followed_id', db.Integer, db.ForeignKey('user.id'))
+    db.Column('user_from_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('user_to_id', db.Integer, db.ForeignKey('user.id'))
 )
 
 
